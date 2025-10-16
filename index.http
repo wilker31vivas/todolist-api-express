@@ -1,0 +1,29 @@
+POST http://localhost:3000/ HTTP/1.1
+Content-Type: application/json 
+
+{
+    "titulo": "subir el codigo a github",
+    "completada": false
+}
+
+###
+PUT http://localhost:3000/3 HTTP/1.1
+Content-Type: application/json
+
+{
+    "titulo": "Ver one piece",
+    "completada": false
+}
+
+###
+PATCH http://localhost:3000/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "completada": true,
+    "titulo": "Comer la cena"
+}
+
+###
+DELETE http://localhost:3000/3 HTTP/1.1
+Content-Type: application/json
