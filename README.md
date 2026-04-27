@@ -1,28 +1,128 @@
-# ✅ To-Do List (CRUD con Express)
 
-Este proyecto es una **aplicación de lista de tareas (To-Do List)** creada para practicar la metodología **CRUD** (Create, Read, Update, Delete) utilizando **Node.js** y **Express**.  
-El objetivo principal es fortalecer el entendimiento del manejo de rutas, peticiones HTTP y persistencia de datos en el backend.
+# ✅ To-Do List API
 
-## ✨ Características
+> A RESTful CRUD API built with Node.js and Express to practice route handling, HTTP methods and backend data persistence.
 
-- ➕ **Crear** nuevas tareas.  
-- 📋 **Listar** todas las tareas disponibles.  
-- ✏️ **Actualizar** el estado o contenido de una tarea.  
-- ❌ **Eliminar** tareas.  
-- 💾 Persistencia de datos mediante archivo local (`tasks.js`).  
-- 🧩 Estructura sencilla y modular para aprender buenas prácticas de backend.
+---
 
-## 🚀 Instalación y uso
+## 🛠️ Tech Stack
 
-1. Clona este repositorio:
-   ```bash
-   git clone https://github.com/tu-usuario/todo-list-express.git
-2. Ingresa al directorio del proyecto:
-   ```bash
-   cd todo-list-express
-3. Inicia el servidor:
-   ```bash
-   npm start
-4. Accede a la API en:
-    ```bash
-    http://localhost:3000
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+| Layer | Technology |
+|-------|-----------|
+| Runtime | Node.js |
+| Framework | Express.js |
+| Persistence | Local JSON file |
+
+---
+
+## ✨ Features
+
+- ➕ **Create** new tasks
+- 📋 **Read** all available tasks
+- ✏️ **Update** a task's content or status
+- ❌ **Delete** tasks
+- 💾 **Data persistence** via local file — no database required
+- 🧩 **Modular structure** following backend best practices
+
+---
+
+## 📋 Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/api/tasks` | Get all tasks |
+| `GET` | `/api/tasks/:id` | Get a task by ID |
+| `POST` | `/api/tasks` | Create a new task |
+| `PUT` | `/api/tasks/:id` | Update a task |
+| `DELETE` | `/api/tasks/:id` | Delete a task |
+
+#### Example — Create a task
+
+```http
+POST /api/tasks
+Content-Type: application/json
+
+{
+  "title": "Buy groceries",
+  "completed": false
+}
+```
+
+```json
+{
+  "id": "a1b2c3",
+  "title": "Buy groceries",
+  "completed": false
+}
+```
+
+---
+
+## ⚙️ Installation
+
+### Prerequisites
+
+- Node.js >= 18.0.0
+- npm
+
+### Steps
+
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/your-user/todo-list-express.git
+cd todo-list-express
+```
+
+**2. Install dependencies**
+
+```bash
+npm install
+```
+
+**3. Start the server**
+
+```bash
+npm start
+```
+
+**4. API available at**
+
+```
+http://localhost:3000/api/tasks
+```
+
+---
+
+## 🧪 Test the API
+
+The repository includes an `app.http` file with all endpoints ready to run from VS Code.
+
+Install the **REST Client** extension (`humao.rest-client`), open `app.http` and click **Send Request** on any endpoint.
+
+---
+
+## 🎯 Learning Goals
+
+This project was built to practice and understand:
+
+- RESTful API design with Express
+- HTTP methods: `GET`, `POST`, `PUT`, `DELETE`
+- Route and middleware organization
+- Data persistence without a database
+
+---
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+<p align="center">
+  Made with ❤️ by <a href="https://github.com/tu-usuario">Wilker Vivas</a>
+</p>
